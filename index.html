@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-deep-blue text-white py-2 px-4">
-    <header class="h-15 border-b border-gray-500/80 bg-deep-blue">
+    <header class="h-15 border-b border-gray-500/80 bg-deep-blue sticky">
         
         <nav>
             <div class="py-2 px-4 flex flex-row justify-between items-center gap-2">
@@ -74,14 +74,15 @@
                     </button>
                     </div>
                 </div>
-                <div class="w-4/10 h-auto"><img src="./images/hero-image.png" alt="Hero Image" class="w-full h-90 rounded-2xl"></div>
+                <div class="w-4/10 h-auto"><img src="./images/hero-image.png" alt="Hero Image" class=" lg:w-full h-90 rounded-2xl"></div>
                 </div>
             </div>
     </section>
 
     <!-- Service Section -->
-    <section class="bg-blue-950 py-2 px-4">
-            <div class="flex flex-col justify-center items-center mt-15">
+    <section class="bg-blue-950 py-2 px-4 w-full">
+            
+        <div class="flex flex-col justify-center items-center mt-10" mb-5>
                 <h2 class="font-bold text-5xl">Our Services</h2>
                 <p class="font-bold text-3xl">We comprehensive solution to help your business thrive in the digital age.</p>
             </div>
@@ -96,7 +97,7 @@
 
                     <h2 class="font-bold text-lg">Web Development</h2>
 
-                    <p class="lg:text-2xl">Custom Websites and web applications built with modern technologies for optimal performanc
+                    <p class="lg:text-1xl">Custom Websites and web applications built with modern technologies for optimal performanc
                     </p>
                 </div>
 
@@ -107,7 +108,7 @@
                 </span>
                     <h2 class="font-bold text-lg">Mobile Apps</h2>
 
-                    <p class="lg:text-2xl">
+                    <p class="lg:text-1xl">
                         Native and cross-platform mobile applications that deliver exceptional user experiences
                     </p>
                 </div>
@@ -118,11 +119,30 @@
                 </span>
                     <h2 class="font-bold text-lg">Digital Marketing</h2>
 
-                    <p class="lg:text-2xl">
+                    <p class="lg:text-1xl">
                         strategic marketing campaigns that boost your online presence and drives conversation
                     </p>
                 </div>
             </div>
     </section>
+    
+    <!-- About Section -->
+     <section class="bg-dark-blue py-2 px-4 w-full">
+        <div class="flex flex-col lg:flex-row gap-6 mt-10 py-2 px-4 justify-center items-center w-full full-20/10">
+
+            <div class="flex w-6/10 h-auto mt-10 py-2 px-4 rounded-2xl">
+
+                <img src="./images/about-image.png" alt="About Image" class="w-full h-90 rounded-2xl">
+
+            </div>
+            <div class="w-6/10 h-full mt-10 gap-6">
+               <div class="flex flex-col gap-4 py-6 px-8">
+                 <h2 class="font-bold lg:text-5xl">About Nexus</h2>
+
+                <p class="lg:text-1xl">We are forward-thinking technology company decicated to helping businesses navigate the digital transformation journey. We deliver solutions that matter</p>
+               </div>
+            </div>
+        </div>
+     </section>
 </body>
 </html>
