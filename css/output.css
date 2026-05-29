@@ -12,8 +12,10 @@
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-purple-500: oklch(62.7% 0.265 303.9);
+    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
@@ -35,10 +37,12 @@
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-bold: 700;
+    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-deep-blue: #110a2e;
+    --color-dark-blue: #1a0e4c;
   }
 }
 @layer base {
@@ -193,11 +197,17 @@
   .sticky {
     position: sticky;
   }
-  .bottom-2 {
-    bottom: calc(var(--spacing) * 2);
+  .top-0 {
+    top: calc(var(--spacing) * 0);
   }
-  .bottom-10 {
-    bottom: calc(var(--spacing) * 10);
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
   }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
@@ -205,20 +215,20 @@
   .mt-1\.5 {
     margin-top: calc(var(--spacing) * 1.5);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
-  }
-  .mt-15 {
-    margin-top: calc(var(--spacing) * 15);
   }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
+  .ml-0 {
+    margin-left: calc(var(--spacing) * 0);
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
@@ -226,11 +236,11 @@
   .flex {
     display: flex;
   }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
+  .table {
+    display: table;
   }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
+  .h-5 {
+    height: calc(var(--spacing) * 5);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -238,14 +248,11 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
-  .h-40 {
-    height: calc(var(--spacing) * 40);
+  .h-32 {
+    height: calc(var(--spacing) * 32);
   }
   .h-60 {
     height: calc(var(--spacing) * 60);
-  }
-  .h-80 {
-    height: calc(var(--spacing) * 80);
   }
   .h-90 {
     height: calc(var(--spacing) * 90);
@@ -256,11 +263,23 @@
   .h-full {
     height: 100%;
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
   .w-4\/10 {
     width: calc(4 / 10 * 100%);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-6\/10 {
     width: calc(6 / 10 * 100%);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-9\/10 {
+    width: calc(9 / 10 * 100%);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -270,6 +289,12 @@
   }
   .w-full {
     width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -298,11 +323,17 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
   .rounded {
     border-radius: 0.25rem;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -311,6 +342,15 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+  }
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
+  }
+  .border-gray-500\/20 {
+    border-color: color-mix(in srgb, oklch(55.1% 0.027 264.364) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-gray-500) 20%, transparent);
+    }
   }
   .border-gray-500\/40 {
     border-color: color-mix(in srgb, oklch(55.1% 0.027 264.364) 40%, transparent);
@@ -327,11 +367,29 @@
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
+  .bg-blue-600 {
+    background-color: var(--color-blue-600);
+  }
   .bg-blue-950 {
     background-color: var(--color-blue-950);
   }
+  .bg-dark-blue {
+    background-color: var(--color-dark-blue);
+  }
   .bg-deep-blue {
     background-color: var(--color-deep-blue);
+  }
+  .bg-deep-blue\/10 {
+    background-color: color-mix(in srgb, #110a2e 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-deep-blue) 10%, transparent);
+    }
+  }
+  .bg-deep-blue\/20 {
+    background-color: color-mix(in srgb, #110a2e 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-deep-blue) 20%, transparent);
+    }
   }
   .bg-green-500 {
     background-color: var(--color-green-500);
@@ -394,8 +452,36 @@
   .text-blue-400 {
     color: var(--color-blue-400);
   }
+  .text-gray-50 {
+    color: var(--color-gray-50);
+  }
+  .text-gray-50\/10 {
+    color: color-mix(in srgb, oklch(98.5% 0.002 247.839) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-gray-50) 10%, transparent);
+    }
+  }
+  .text-gray-50\/20 {
+    color: color-mix(in srgb, oklch(98.5% 0.002 247.839) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-gray-50) 20%, transparent);
+    }
+  }
+  .text-gray-50\/30 {
+    color: color-mix(in srgb, oklch(98.5% 0.002 247.839) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-gray-50) 30%, transparent);
+    }
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .hover\:border {
     &:hover {
@@ -512,11 +598,17 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @theme{
-    --color-deep-blue: #110a2e
+    --color-deep-blue: #110a2e;
+    --color-pale-black: rgb(17, 10, 46);
+    --color-dark-blue: #1a0e4c;
 }
 
 .card{

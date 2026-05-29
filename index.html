@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-deep-blue text-white py-2 px-4">
-    <header class="h-15 border-b border-gray-500/80 bg-deep-blue sticky">
+    <header class="h-15 border-b border-gray-500/80 bg-deep-blue sticky z-10 top-0">
         
         <nav>
             <div class="py-2 px-4 flex flex-row justify-between items-center gap-2">
@@ -127,7 +127,8 @@
     </section>
     
     <!-- About Section -->
-     <section class="bg-dark-blue py-2 px-4 w-full">
+     <section class="bg-dark-blue py-2 px-4 w-full top-3">
+
         <div class="flex flex-col lg:flex-row gap-6 mt-10 py-2 px-4 justify-center items-center w-full full-20/10">
 
             <div class="flex w-6/10 h-auto mt-10 py-2 px-4 rounded-2xl">
@@ -144,5 +145,92 @@
             </div>
         </div>
      </section>
+
+     <!-- Contact Section -->
+    <section>
+        <div class="flex flex-col justify-center items-center mt-6 py-2 px-4 gap-4">
+            <h2 class="font-bold lg:text-3xl">Get In Touch</h2>
+            <p class="lg:text-1xl font-bold">
+                Ready to start your project, let's discuss how we can help you achieve your goals. Contact us today to schedule a consultation and take the first step towards digital success.
+            </p>
+        </div>
+
+        <div class="bg-deep-blue/20 flex flex-col lg:flex-row gap-20 py-2 px-4 justify-center items-center border border-gray-500/20 rounded-2xl w-9/10">
+            <div>
+                <div class="flex ml-0 mt-0 flex-col">
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        hellow@nexus.com
+                    </span>
+                    <span>
+                        <h3>
+                            <i class="fa-solid fa-phone"></i>
+                            +1(555)123-4567 
+                        </h3>  
+                    </span>
+                    <span>
+                        <h3>
+                            <i class="fa-solid fa-location-dot"></i>
+                            123 Business Ave, Tech City
+                        </h3>
+                    </span>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div >
+                <form>
+                    <div>
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full border border-gray-500/40 rounded py-2 px-4 mb-4">
+
+                        <label for="email"></label>
+                        <input type="email" id="name" name="name" placeholder="Your Email" class="w-full border border-gray-500/40 rounded py-2 px-4 mb-4">
+
+                        <label for="message"></label>
+                        <textarea id="message" name="message" placeholder="Your Message" class="w-full border border-gray-500/40 rounded py-2 px-4 mb-4 h-32"></textarea>
+                        <div class="flex bg-blue-600 justify-center items-center rounded-xl h-10">
+                            <button class="font-bold lg:text-2xl mt-0">
+                                Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer class="bg-deep-blue/10">
+           <div class="py-2 px-4 flex flex-row justify-between items-center gap-2">
+        
+            <div div class="flex flex-row items-center gap-2">
+
+                <span class="bg-blue-500 rounded w-10 h-10 py-2 px-2">
+            <i class="fa-solid fa-bolt"></i>
+            </span>
+            <span class="font-bold text-xl ml-1">Nexus</span>
+            </div>
+               
+              <div>
+                  <h5 class="text-gray-50/30">&copy;2024 Nexus. All Right Reserved</h5>
+              </div>
+
+                <div class="flex flex-row items-center gap-2">
+                    <span>
+                    <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    
+                    <span>
+                    <i class="fa-brands fa-linkedin"></i></i>
+                    </span>
+
+                    <span>
+                    <i class="fa-solid fa-parachute-box"></i></i>
+                    </span>
+
+                </div>
+                </div>
+   
+        </footer>
+    </section>
 </body>
 </html>
